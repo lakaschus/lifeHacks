@@ -1,11 +1,7 @@
 # Based on https://www.youtube.com/watch?v=wlR5gYd6um0&feature=youtu.be
 # Checkout https://www.youtube.com/channel/UCUR1pFG_3XoZn3JNKjulqZg for more vim tutorials
 
-    # Test text to test vimfkemfekm
-    # Indent
-    # Indent 2
-
-print """ Basic Commands (Motions)  \n
+motions =  """ Basic Commands (Motions)  \n
 go line up:				k  
 go line down:				j  
 go x line up:				{x}k
@@ -17,7 +13,7 @@ find next char (forward/backward):	f/F
 search:					/{word}
 """
 
-print """ Basic Commands (Active - Changes thae document) \n
+basicActiveCommands = """ Basic Commands (Active - Changes thae document) \n
 repeat previous command:			.
 delete char under cursor:			x
 replace char under cursor:			r
@@ -35,7 +31,7 @@ indent right/left:				>/<
 indent x lines right/left:                      >/< {x}j
 """
 
-print """ Further nouns - Text Objects \n
+textObjects = """ Further nouns - Text Objects \n
 'inner word':		iw  
 'inner tag':		it  
 'inner quotes':		i"  
@@ -45,32 +41,23 @@ Many commands in vim are of the form {verb}+{noun}.
 For example: delete a sentence: das.
 """
 
-# This is a sentence. This is another one.
-# "inner quotes"
-# tetwe
-# wetwdeg
-# erwerwwqr
-# qwerqwet
-
-# fqwefwef
-
-print """ Combination Commands \n
+combinedCommands = """ Combination Commands \n
 change everything until char X:		ct{X}
 change everything until word X:		c/{X}
 change inner word (repeatable):		ciw
 insert letter {L} x times:		esc x i {L} esc esc
 """
 
-print """ ':' Commands \n
+complexCommands = """ ':' Commands \n
 Find each occurrence of 'foo' (in all lines), and replace it with 'bar' (and ask for confirmation:
 # :%s/foo/bar/gc \n
 """
 
-print """ Other Commands:
+otherCommands =  """ Other Commands:
 open config file in terminal:		vim ~/.vimrc
 """
 
-print """ Plugin Commands:
+pluginInstructions = """ Plugin Commands:
 checkout https://github.com/junegunn/vim-plug/blob/master/doc/plug.txt for installing plugins.
 find more plugins on
 https://github.com/kana/vim-textobj-user/wiki
@@ -79,3 +66,25 @@ COMMENTS Plugin:
 Look here for possible problems: https://stackoverflow.com/questions/13469194/i-cant-work-with-nerdcommenter
 Look here for documentation: https://github.com/scrooloose/nerdcommenter
 """
+
+commandsList = ["motions", "basicActiveCommands", "textObjects", "combinedCommands", \
+                 "complexCommands", "otherCommands", "pluginInstructions", "allCommands"]
+
+allCommands = motions+basicActiveCommands+textObjects+combinedCommands+combinedCommands+\
+                complexCommands+otherCommands+pluginInstructions
+
+def displayCommands(commands):
+    print commandsDict[str(commands)]
+
+def main():
+    print("Please choose one the following options: \n")
+    out = ""
+    for i in range(len(commandsList)):
+        out += commandsList[i]+", "
+    selection = input(out[:-2]+": \n")
+    print("\n"+selection)
+
+while True:
+    main()
+
+
