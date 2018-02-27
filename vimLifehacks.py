@@ -1,7 +1,7 @@
 # Based on https://www.youtube.com/watch?v=wlR5gYd6um0&feature=youtu.be
 # Checkout https://www.youtube.com/channel/UCUR1pFG_3XoZn3JNKjulqZg for more vim tutorials
 
-motions =  """ Basic Commands (Motions)  \n
+motions = u""" Basic Commands (Motions)  \n
 go line up:				k  
 go line down:				j  
 go x line up:				{x}k
@@ -73,16 +73,26 @@ commandsList = ["motions", "basicActiveCommands", "textObjects", "combinedComman
 allCommands = motions+basicActiveCommands+textObjects+combinedCommands+combinedCommands+\
                 complexCommands+otherCommands+pluginInstructions
 
+commandsDict = {"motions": motions,
+                "basicActiveCommands": basicActiveCommands,
+                "textObjects": textObjects,
+                "combinedCommands": combinedCommands,
+                "complexCommands": complexCommands,
+                "otherCommands": otherCommands,
+                "pluginInstructions": pluginInstructions,
+                "allCommands": allCommands
+        }
+
 def displayCommands(commands):
-    print commandsDict[str(commands)]
+    print(commandsDict[str(commands)])
 
 def main():
     print("Please choose one the following options: \n")
     out = ""
     for i in range(len(commandsList)):
         out += commandsList[i]+", "
-    selection = input(out[:-2]+": \n")
-    print("\n"+selection)
+    selection = str(input(out[:-2]+": \n"))
+    print("\n"+commandsDict[selection])
 
 while True:
     main()
