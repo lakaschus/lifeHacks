@@ -51,6 +51,7 @@ insert letter {L} x times:		esc x i {L} esc esc
 complexCommands = """ ':' Commands \n
 Find each occurrence of 'foo' (in all lines), and replace it with 'bar' (and ask for confirmation:
 # :%s/foo/bar/gc \n
+Format json file: # :%!python -m json.tool 
 """
 
 otherCommands =  """ Other Commands:
