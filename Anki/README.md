@@ -15,10 +15,11 @@ How to use:
 1) Open Anki on the Desktop version
 2) click on **Browse**
 3) Choose a Deck on the left. Below the right column where the cards are listed is located a button called **Cards...**. click on that.
-4) Replace the **Front Template** with the content of fontRandomizer.html
-   Note, in fontRandomizer.html you might need to replace {{Front}} by the name of the front field. Most of the time it's just called "Front".
+4) Replace the **Front Template** with the content of fontRandomizer.html.
+   Note, in fontRandomizer.html you might need to replace {{Front}} by the label of the front field. Most of the time it's just called "Front".
    If it's not go back and look up the name of the Front field, it is found below the **Cards...** button. If for instance the Front is labeled 
-   "Hanzi", then you to replace {{Front}} by {{Hanzi}}.
+   "Hanzi", then you to replace {{Front}} by {{Hanzi}}.\\
+   The template is then applied to all cards with the same card type, so you don't need to do this for every single card! Note however, that this also affects cards in          other decks with the same card type. If you don't want that, then you should create a new card type specifically for that deck you want to randomize.
 
 That's it!
 If you want to change the list of possible fonts, then just look up the array *fontList* in the fontRandomizer.html and add/remove fonts. You can look up possible fonts on the internet by googling "list of html css fonts" or something like that.
