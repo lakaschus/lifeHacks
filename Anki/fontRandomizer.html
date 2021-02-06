@@ -1,4 +1,7 @@
+<span id="front"></span>
+
 <script>
+
 function getRandomColor() {
   var letters = '0123456789ABCDE';
   var color = '#';
@@ -16,8 +19,13 @@ function getRandomFont() {
 
 color = getRandomColor();
 font = getRandomFont();
-fontSize = 30 + Math.floor(Math.random() * 50);  
-fontWeight = Math.floor(Math.random() * 1000);
-var str = "<span style='font-size: "+fontSize+"; font-family: "+font+"; font-weight: "+fontWeight+";color:"+color+";'>{{Simplified}}</span>";
-document.write(str);
+fontSize = (50 + Math.floor(Math.random() * 80))+"px";  
+fontWeight = Math.floor(Math.random() * 800);
+
+var Element = document.getElementById("front")
+Element.innerHTML = "{{Simplified}}"
+Element.style.color = color
+Element.style.fontFamily = font
+Element.style.fontSize = fontSize
+Element.style.fontWeight = fontWeight
 </script>
