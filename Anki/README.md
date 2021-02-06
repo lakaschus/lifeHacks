@@ -13,4 +13,4 @@ In this way you learn like a good Machine Learning algorithm that has a diverse 
 How to use:
 
 1) Open Anki on the Desktop version
-2) click on *Browse* 
+2) click on **Browse**
