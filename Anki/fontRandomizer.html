@@ -12,13 +12,20 @@ function getRandomColor() {
 }
 
 function getRandomFont() {
-  var fontList = ["Arial", "Arial Narrow", "sans-serif", "Andale Mono", "Lato", "Kaiti", "SimSun", "Microsoft YaHei", "KaiTi", "微軟正黑體", "新細明體", "微软雅黑", "Hiragino Kaku Gothic Pro", "WenQuanYi Zen Hei", "蘋果儷中黑", "STXihei", "宋体", "Helvetica", "华文细黑"]
+  var fontList = ["Arial", "Arial Narrow", "sans-serif", "Andale Mono", "Lato", "Kaiti", "SimSun", "Microsoft YaHei", "KaiTi", "微軟正黑體", "新細明體", "微软雅黑", "Hiragino Kaku Gothic Pro", "WenQuanYi Zen Hei", "蘋果儷中黑", "STXihei", "宋体", "Helvetica", "华文细黑", "游ゴシック"]
+  var font = fontList[Math.floor(Math.random() * fontList.length)];
+  return font;
+}
+
+function getRandomFontStyle() {
+  var fontList = ["normal", "italic", "oblique"]
   var font = fontList[Math.floor(Math.random() * fontList.length)];
   return font;
 }
 
 color = getRandomColor();
 font = getRandomFont();
+fontStyle = getRandomFontStyle();
 fontSize = (50 + Math.floor(Math.random() * 80))+"px";  
 fontWeight = Math.floor(Math.random() * 800);
 
@@ -26,6 +33,8 @@ var Element = document.getElementById("front")
 Element.innerHTML = "{{Simplified}}"
 Element.style.color = color
 Element.style.fontFamily = font
+// Different font styles don't look nice for Chinese characters
+// Element.style.fontStyle = fontStyle        
 Element.style.fontSize = fontSize
 Element.style.fontWeight = fontWeight
 </script>
