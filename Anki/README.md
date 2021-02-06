@@ -14,3 +14,14 @@ How to use:
 
 1) Open Anki on the Desktop version
 2) click on **Browse**
+3) Choose a Deck on the left. Below the right column where the cards are listed is located a button called **Cards...**. click on that.
+4) Replace the **Front Template** with the content of fontRandomizer.html
+   Note, in fontRandomizer.html you might need to replace {{Front}} by the name of the front field. Most of the time it's just called "Front".
+   If it's not go back and look up the name of the Front field, it is found below the **Cards...** button. If for instance the Front is labeled 
+   "Hanzi", then you to replace {{Front}} by {{Hanzi}}.
+
+That's it!
+If you want to change the list of possible fonts, then just look up the array *fontList* in the fontRandomizer.html and add/remove fonts. You can look up possible fonts on the internet by googling "list of html css fonts" or something like that.
+If you don't want to randomize size, font-weight, or color, then just comment out Lines 34, 35 and 36 by adding "//" in front of each of these lines.
+
+This script will not modify your card information in the database. Therefore, in order to remove the fontRandomizer just remove the code in **Front Template**.
