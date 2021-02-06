@@ -18,7 +18,8 @@ How to use:
 4) Replace the **Front Template** with the content of fontRandomizer.html.
    Note, in fontRandomizer.html you might need to replace {{Front}} by the label of the front field. Most of the time it's just called "Front".
    If it's not go back and look up the name of the Front field, it is found below the **Cards...** button. If for instance the Front is labeled 
-   "Hanzi", then you to replace {{Front}} by {{Hanzi}}.\\
+   "Hanzi", then you to replace {{Front}} by {{Hanzi}}.
+   
    The template is then applied to all cards with the same card type, so you don't need to do this for every single card! Note however, that this also affects cards in          other decks with the same card type. If you don't want that, then you should create a new card type specifically for that deck you want to randomize.
 
 That's it!
