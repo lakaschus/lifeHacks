@@ -1,0 +1,23 @@
+<script>
+function getRandomColor() {
+  var letters = '0123456789ABCDE';
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+function getRandomFont() {
+  var fontList = ["Arial", "Arial Narrow", "sans-serif", "Andale Mono", "Lato", "Kaiti", "SimSun", "Microsoft YaHei", "KaiTi", "微軟正黑體", "新細明體", "微软雅黑", "Hiragino Kaku Gothic Pro", "WenQuanYi Zen Hei", "蘋果儷中黑", "STXihei", "宋体", "Helvetica", "华文细黑"]
+  var font = fontList[Math.floor(Math.random() * fontList.length)];
+  return font;
+}
+
+color = getRandomColor();
+font = getRandomFont();
+fontSize = 30 + Math.floor(Math.random() * 50);  
+fontWeight = Math.floor(Math.random() * 1000);
+var str = "<span style='font-size: "+fontSize+"; font-family: "+font+"; font-weight: "+fontWeight+";color:"+color+";'>{{Simplified}}</span>";
+document.write(str);
+</script>
