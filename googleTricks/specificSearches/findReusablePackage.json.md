@@ -6,3 +6,10 @@ To this end, I found the following Google search to be efficient for looking for
 
 `site:github.com "package.json" "package A" "package B" ... "package Z"`
 
+### Example
+
+If you like to start a new project with *vue 2.6.12*, *tailwindcss*, *firebase* and *axios* employ the following search:
+
+`site:github.com "package.json" "vue" "2.6.12" "tailwindcss" "firebase" "axios"`
+
+Of course, the less specific the more results. So it might be useful to omit the version number to get more results.
